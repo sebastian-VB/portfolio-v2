@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+:root{
+    --bg-page: rgb(0, 0, 0);
+    --bg-aboutme: rgb(20, 27, 37);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--bg-aboutme);
+    color: white;
+}

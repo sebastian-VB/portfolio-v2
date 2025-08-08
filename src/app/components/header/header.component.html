@@ -1,0 +1,44 @@
+
+<header>
+  <div class="content-header">
+
+    <div class="content-logo">
+      <div class="mbl-icon-hamburger" (click)="openMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo">
+        <img src="./images/sebasdev.webp" alt="">
+      </div>
+    </div>
+
+    <div class="content-navbar">
+      <nav>
+        <div class="mbl-nav-bag"></div>
+        <div class="menu">
+          <div class="primary-menu">
+            <ul>
+              <li class="element-primary"><a href="" class="home">// home</a></li>
+              <li class="element-primary"><a href="" class="aboutme">// aboutme</a></li>
+              <li class="element-primary"><a href="" class="experience">// experience</a></li>
+              <li class="element-primary"><a href="" class="projects">// projects</a></li>
+              <li class="element-primary"><a href="" class="contact">// contact</a></li>
+            </ul>
+          </div>
+          <div class="mbl-menu" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu">
+            <div class="mbl-menu-icon" (click)="closeMenu()">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul>
+              <li class="mbl-element-primary"><a href="">// home</a></li>
+              <li class="mbl-element-primary"><a href="">// aboutme</a></li>
+              <li class="mbl-element-primary"><a href="">// experience</a></li>
+              <li class="mbl-element-primary"><a href="">// projects</a></li>
+              <li class="mbl-element-primary"><a href="">// contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+</header>
