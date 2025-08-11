@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { NavBarService } from '../../services/navBar.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './home.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent { }
+export class HomeComponent{
+  
+  stateBtnService = inject(NavBarService);
+  // stateBtn:boolean = this.stateBtnService.stateBtn();
+  
+}

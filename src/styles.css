@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root{
-    --bg-page: rgb(0, 0, 0);
-    --bg-aboutme: rgb(20, 27, 37);
+    --bg-page: rgb(26, 25, 29);
+    --bg-aboutme: rgb(21, 33, 46);
 }
 
 html{
@@ -11,6 +11,6 @@ html{
 
 body{
     overflow-x: hidden;
-    background-color: var(--bg-aboutme);
+    background-color: var(--bg-page);
     color: white;
 }
