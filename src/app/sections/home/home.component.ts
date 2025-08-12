@@ -1,16 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
-import { NavBarService } from '../../services/navBar.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ButtonDownloadCvComponent } from "../../components/button-download-cv/button-download-cv.component";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [ButtonDownloadCvComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent{
-  
-  stateBtnService = inject(NavBarService);
-  // stateBtn:boolean = this.stateBtnService.stateBtn();
   
 }
