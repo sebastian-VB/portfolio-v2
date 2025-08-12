@@ -12,7 +12,6 @@ export class NavBarService {
 
   setStateBtn(state: boolean){
     this._stateBtn.set(state);
-    console.log(this.stateBtn());
   }
 
 }
