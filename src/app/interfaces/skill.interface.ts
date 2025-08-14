@@ -1,5 +1,6 @@
 export interface Skill{
+    id: number;
     imageUrl: string;
     title: string;
-    skills: string[];
+    level: string;
 }
