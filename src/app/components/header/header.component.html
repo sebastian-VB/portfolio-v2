@@ -19,7 +19,7 @@
             <ul>
               <li class="element-primary"><a href="#home" class="home">// home</a></li>
               <li class="element-primary"><a href="#aboutme" class="aboutme">// aboutme</a></li>
-              <li class="element-primary"><a href="" class="experience">// experience</a></li>
+              <li class="element-primary"><a href="#experience" class="experience">// experience</a></li>
               <li class="element-primary"><a href="" class="projects">// projects</a></li>
               <li class="element-primary"><a href="" class="contact">// contact</a></li>
             </ul>
@@ -44,7 +44,9 @@
                 </a>
               </li>
               <li class="mbl-element-primary">
-                <a href="">
+                <a href="#experience" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu"
+                  (click)="navigateAndClose($event, 'experience')"
+                >
                   // experience
                 </a>
               </li>

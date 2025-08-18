@@ -1,0 +1,43 @@
+<div class="acordion-container">
+    
+    <div class="acordion-header" (click)="onToggle()" [class.click]="isOpen">
+        <span class="job">
+            {{work()?.job}} - 
+            <strong>{{work()?.company}}</strong>
+        </span>
+        <div class="header-rigth">
+            <span>{{work()?.workinTime}}</span>
+            <div class="content-icon">
+                <span class="line1"></span>
+                <span class="line2" [class.click]="isOpen"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="acordion-body" [class.open]="isOpen">
+
+        <div class="content-img">
+            <img [src]="work()?.logo" alt="">
+        </div>
+
+        <div class="body-content">
+            <div class="content-other-info">
+                <div class="address">
+                    <img src="./images/icons/point.svg" alt="">
+                    <p>{{work()?.address}}</p>
+                </div>
+                <p class="capsule">{{work()?.mode}}</p>
+            </div>
+            <div class="content-desc">
+                <p>{{work()?.description}}</p>
+            </div>
+            <div class="content-tech">
+                @for (leng of work()?.technologies; track leng) {
+                    <p class="capsule">{{leng}}</p>
+                }
+            </div>
+        </div>
+
+    </div>
+
+</div>

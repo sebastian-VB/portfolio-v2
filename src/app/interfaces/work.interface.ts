@@ -1,5 +1,10 @@
 export interface Work{
-    imageUrl: string;
-    name: string;
-    description: string[];
+    logo: string;
+    job: string;
+    company: string;
+    description: string;
+    address: string;
+    technologies: string[];
+    workinTime: string;
+    mode: string;
 }

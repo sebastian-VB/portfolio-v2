@@ -1,1 +1,16 @@
-<p>curriculum works!</p>,
+<section class="experience">
+    
+    <h2 class="title-section">My experience</h2>
+
+    <div class="experience-content">
+        @for (work of works; track work; let index = $index) {
+            <app-accordion 
+                [work]="work" 
+                [index]="index" 
+                [activeIndex]="activeIndex" 
+                (toggle)="toggleAccordion($event)" 
+            />
+        }
+    </div>
+
+</section>

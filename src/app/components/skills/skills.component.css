@@ -16,3 +16,9 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+@media(max-width: 435px){
+  .content-skills {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
