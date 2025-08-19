@@ -20,7 +20,7 @@
               <li class="element-primary"><a href="#home" class="home">// home</a></li>
               <li class="element-primary"><a href="#aboutme" class="aboutme">// aboutme</a></li>
               <li class="element-primary"><a href="#experience" class="experience">// experience</a></li>
-              <li class="element-primary"><a href="" class="projects">// projects</a></li>
+              <li class="element-primary"><a href="#projects" class="projects">// projects</a></li>
               <li class="element-primary"><a href="" class="contact">// contact</a></li>
             </ul>
           </div>
@@ -51,7 +51,9 @@
                 </a>
               </li>
               <li class="mbl-element-primary">
-                <a href="">
+                <a href="#projects" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu"
+                  (click)="navigateAndClose($event, 'projects')"
+                >
                   // projects
                 </a>
               </li>

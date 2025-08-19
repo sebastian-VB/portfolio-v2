@@ -3,4 +3,5 @@ export interface Project{
   projectName: string;
   technologies: string[];
   repositoryUrl: string;
+  description?: string;
 }

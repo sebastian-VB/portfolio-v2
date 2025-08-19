@@ -1,0 +1,21 @@
+
+<div class="card">
+
+    <div class="card-image">
+        <img [src]="project()?.imageUrl" alt="">
+    </div>
+
+    <div class="card-content">
+        <p class="project-name">{{project()?.projectName}}</p>
+        <div class="tech">
+            @for (tech of project()?.technologies; track tech) {
+                <p class="capsule">{{tech}}</p>
+            }
+        </div>
+        <div class="card-link">
+            <p>Desarrollo web</p>
+            <a [href]="project()?.repositoryUrl" target="_blank">Ver repositorio ___</a>
+        </div>
+    </div>
+
+</div>

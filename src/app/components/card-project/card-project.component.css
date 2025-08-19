@@ -1,0 +1,111 @@
+.card{
+  width: 400px;
+  height: 450px;
+  background-color: #2f2d33;
+  border-radius: 10px;
+}
+
+.card .card-image{
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.card .card-image img{
+  width: fit-content;
+  border-radius: 10px 10px 0px 0px;
+  transition: all .3s ease;
+}
+
+.card .card-content{
+  padding: 0 20px;
+}
+
+.card .card-content .project-name{
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.card .card-content .tech{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card:hover .card-image img{
+  transform: scale(1.1);
+}
+
+/* diseño del link para ver mas */
+
+.card-content .card-link{
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(194, 194, 194);
+  background-color: aliceblue;
+  position: relative;
+}
+
+.card-content .card-link p, 
+.card-content .card-link a{
+  position: absolute;
+  transition: all .3s ease;
+}
+
+.card-content .card-link p{
+  top: 0px;
+}
+
+.card-content .card-link a{
+  top: 25px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-content .card-link a:hover{
+  color: #FFD036;
+}
+
+.card:hover .card-content .card-link a{
+  top: 0px;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card:hover .card-content .card-link p{
+  top: -25px;
+  opacity: 0;
+}
+
+
+
+@media(max-width: 955px){
+  
+  .card{
+    width: 350px;
+  }
+
+}
+
+@media(max-width: 870px){
+  .card{
+    width: 300px;
+    height: 400px;
+  }
+
+  .card .card-content .tech p{
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 760px){
+  .card{
+    width: 300px;
+  }
+
+  .card .card-content .project-name{
+    font-size: 18px;
+  }
+}
