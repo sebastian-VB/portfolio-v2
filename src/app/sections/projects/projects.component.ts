@@ -32,7 +32,7 @@ export class ProjectsComponent {
     },
     {
       imageUrl: './images/projects/hero-app.webp',
-      projectName: 'Heroes App - CRUD',
+      projectName: 'Heroes App',
       technologies: ['HTML', 'CSS', 'TYPESCRIPT' , 'ANGULAR', 'ANGULAR MATERIAL', 'PRIMEFLEX'],
       repositoryUrl: 'https://github.com/sebastian-VB/heores-app',
     }

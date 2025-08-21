@@ -21,7 +21,7 @@
               <li class="element-primary"><a href="#aboutme" class="aboutme">// aboutme</a></li>
               <li class="element-primary"><a href="#experience" class="experience">// experience</a></li>
               <li class="element-primary"><a href="#projects" class="projects">// projects</a></li>
-              <li class="element-primary"><a href="" class="contact">// contact</a></li>
+              <li class="element-primary"><a href="#contact" class="contact">// contact</a></li>
             </ul>
           </div>
           <div class="mbl-menu" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu">
@@ -58,7 +58,9 @@
                 </a>
               </li>
               <li class="mbl-element-primary">
-                <a href="">
+                <a href="#contact" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu"
+                  (click)="navigateAndClose($event, 'contact')"
+                >
                   // contact
                 </a>
               </li>

@@ -1,3 +1,141 @@
-:host {
-  display: block;
+footer{
+  height: 300px;
+  background-color: #0E0E0E;
+  margin-top: 50px;
+  padding: 30px;
+
+  --linkedin-color: #0066C8;
+  --github-color: #3e3c42;
+  --gmail-color: #DE493D;
+  --whatsapp-color: #4AEB67;
+}
+
+.contact{
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact .content-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact .content-text .name{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.contact .content-text .prof{
+  color: #9b9b9b;
+}
+
+/* diseño y animacion en los iconos */
+.contact .content-icons ul{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.contact .content-icons ul li a img{
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+}
+
+.contact .content-icons ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.contact .content-icons ul li a{
+  background-color: #8b8b8b;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .content-icons ul li a::after{
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: all .3s ease-out;
+}
+
+.contact .content-icons ul li .linkedin::after{
+  background-color: var(--linkedin-color);
+}
+
+.contact .content-icons ul li .github::after{
+  background-color: var(--github-color);
+}
+
+.contact .content-icons ul li .gmail::after{
+  background-color: var(--gmail-color);
+}
+
+.contact .content-icons ul li .whatsapp::after{
+  background-color: var(--whatsapp-color);
+}
+
+.contact .content-icons ul li a:hover::after{
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+/* diseño y animacion dle texto */
+.contact .content-icons ul li span{
+  padding: 4px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -30px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all .4s ease-out;
+}
+
+.contact .content-icons ul li .linkedin-name{
+  background-color: var(--linkedin-color);
+}
+
+.contact .content-icons ul li .github-name{
+  background-color: var(--github-color);
+}
+
+.contact .content-icons ul li .gmail-name{
+  background-color: var(--gmail-color);
+}
+
+.contact .content-icons ul li .whatsapp-name{
+  background-color: var(--whatsapp-color);
+}
+
+.contact .content-icons ul a:hover + span{
+  top: -40px;
+  opacity: 1;
+}
+
+@media(max-width: 795px){
+  .contact{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact .content-icons ul{
+    gap: 20px;
+  }
+
 }

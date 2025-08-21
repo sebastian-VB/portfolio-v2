@@ -73,6 +73,12 @@ header.visible {
 .content-navbar .primary-menu ul .element-primary a:hover { color: white; }
 .content-navbar .primary-menu ul:hover .element-primary a:not(:hover) { color: #858585; }
 
+
+/* efectos del nav mobile */
+.content-navbar .mbl-menu ul .mbl-element-primary a{ transition: color .3s ease; }
+.content-navbar .mbl-menu ul .mbl-element-primary a:hover { color: black; font-weight: 700;}
+.content-navbar .mbl-menu ul:hover .mbl-element-primary a:not(:hover) { color: #858585; }
+
 .mbl-menu,
 .mbl-icon-hamburger{
   display: none;

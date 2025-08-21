@@ -6,7 +6,7 @@
     </div>
 
     <div class="card-content">
-        <p class="project-name">{{project()?.projectName}}</p>
+        <p class="project-name">{{project()?.projectName}} <span class="span">no está en producción</span> </p>
         <div class="tech">
             @for (tech of project()?.technologies; track tech) {
                 <p class="capsule">{{tech}}</p>

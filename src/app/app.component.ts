@@ -5,6 +5,7 @@ import { HomeComponent } from "./sections/home/home.component";
 import { AboutmeComponent } from "./sections/aboutme/aboutme.component";
 import { CurriculumComponent } from "./sections/curriculum/curriculum.component";
 import { ProjectsComponent } from "./sections/projects/projects.component";
+import { FooterComponent } from "./sections/footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { ProjectsComponent } from "./sections/projects/projects.component";
     HomeComponent,
     AboutmeComponent,
     CurriculumComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FooterComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
