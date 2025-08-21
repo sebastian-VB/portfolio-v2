@@ -17,11 +17,17 @@
         <div class="menu">
           <div class="primary-menu">
             <ul>
-              <li class="element-primary"><a href="#home" class="home">// home</a></li>
-              <li class="element-primary"><a href="#aboutme" class="aboutme">// aboutme</a></li>
-              <li class="element-primary"><a href="#experience" class="experience">// experience</a></li>
-              <li class="element-primary"><a href="#projects" class="projects">// projects</a></li>
-              <li class="element-primary"><a href="#contact" class="contact">// contact</a></li>
+              @for (element of elementsMenuMobile; track element; let index = $index) {
+                <li class="element-primary">
+                  <a [href]="element.link" [class]="element.name"
+                    [class.selectetd-a]="index == selectedIndex && selectedIndex != 0"
+                    [class.no-selectetd-a]="index != selectedIndex && selectedIndex != 0"
+                    (click)="changeClass(index)"
+                  >
+                    // {{element.name}}
+                  </a>
+                </li>
+              }
             </ul>
           </div>
           <div class="mbl-menu" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu">
@@ -29,41 +35,16 @@
               <i class="fa-solid fa-xmark"></i>
             </div>
             <ul>
-              <li class="mbl-element-primary">
-                <a href="#home" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu" 
-                  (click)="navigateAndClose($event, 'home')"
-                >
-                  // home
-                </a>
-              </li>
-              <li class="mbl-element-primary">
-                <a href="#aboutme" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu" 
-                  (click)="navigateAndClose($event, 'aboutme')"
-                >
-                  // aboutme
-                </a>
-              </li>
-              <li class="mbl-element-primary">
-                <a href="#experience" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu"
-                  (click)="navigateAndClose($event, 'experience')"
-                >
-                  // experience
-                </a>
-              </li>
-              <li class="mbl-element-primary">
-                <a href="#projects" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu"
-                  (click)="navigateAndClose($event, 'projects')"
-                >
-                  // projects
-                </a>
-              </li>
-              <li class="mbl-element-primary">
-                <a href="#contact" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu"
-                  (click)="navigateAndClose($event, 'contact')"
-                >
-                  // contact
-                </a>
-              </li>
+              @for (element of elementsMenuMobile; track element; let index = $index) {
+                <li class="mbl-element-primary">
+                  <a [href]="element.link" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu" 
+                    [class.selectetd-mobile-a]="index == selectedIndex"
+                    (click)="navigateAndClose($event, `${element.name}`, index)"
+                  >
+                    // {{element.name}}
+                  </a>
+                </li>
+              }
             </ul>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, HostListener, inject } from '@angular/core';
 import { NavBarService } from '../../services/navBar.service';
+import { MenuElements } from '../../interfaces/menu-element.interface';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +21,15 @@ export class HeaderComponent {
   isAtTop = true;
 
   private threshold = 200;
+  
+  public elementsMenuMobile: MenuElements[] = [
+    {name: 'home', link: '#home'},
+    {name: 'aboutme', link: '#aboutme'},
+    {name: 'experience', link: '#experience'},
+    {name: 'projects', link: '#projects'},
+    {name: 'contact', link: '#contact'},
+  ];
+  selectedIndex = 0;
 
   openMenu() {
     this.showMenu = true;
@@ -40,16 +50,20 @@ export class HeaderComponent {
     }, 600);
   }
 
-  navigateAndClose(event: Event, targetId: string) {
+  navigateAndClose(event: Event, targetId: string, index: number) {
     event.preventDefault();
     this.closeMenu();
-
+    this.changeClass(index);
     setTimeout(() => {
       const target = document.getElementById(targetId);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' }); 
       }
     }, 600);
+  }
+
+  changeClass(index: number){
+    this.selectedIndex = index;
   }
 
   @HostListener('window:scroll', [])
