@@ -1,15 +1,27 @@
 <section class="experience">
     
-    <h2 class="title-section">My experience</h2>
+    <h2 class="title-section" data-aos="zoom-in">My experience</h2>
 
     <div class="experience-content">
         @for (work of works; track work; let index = $index) {
-            <app-accordion 
-                [work]="work" 
-                [index]="index" 
-                [activeIndex]="activeIndex" 
-                (toggle)="toggleAccordion($event)" 
-            />
+            @if (index % 2 == 0) {
+                <app-accordion 
+                    [work]="work" 
+                    [index]="index" 
+                    [activeIndex]="activeIndex" 
+                    (toggle)="toggleAccordion($event)" 
+                    data-aos="fade-right"
+                />
+            }
+            @else {
+                <app-accordion 
+                    [work]="work" 
+                    [index]="index" 
+                    [activeIndex]="activeIndex" 
+                    (toggle)="toggleAccordion($event)" 
+                    data-aos="fade-left"
+                />
+            }
         }
     </div>
 

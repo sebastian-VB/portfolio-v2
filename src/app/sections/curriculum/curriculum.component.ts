@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { AccordionComponent } from "../../components/accordion/accordion.component";
 import { Work } from '../../interfaces/work.interface';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-curriculum',
@@ -9,7 +10,7 @@ import { Work } from '../../interfaces/work.interface';
   styleUrl: './curriculum.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CurriculumComponent { 
+export class CurriculumComponent implements OnInit{ 
 
   public works: Work[] = [
     {
@@ -48,6 +49,10 @@ export class CurriculumComponent {
 
   toggleAccordion(index: number) {
     this.activeIndex = this.activeIndex === index ? null : index;
+  }
+
+  ngOnInit(): void {
+      AOS.init();
   }
 
 }

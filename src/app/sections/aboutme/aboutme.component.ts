@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SkillsComponent } from "../../components/skills/skills.component";
 import { Skill } from '../../interfaces/skill.interface';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-aboutme',
@@ -9,7 +10,7 @@ import { Skill } from '../../interfaces/skill.interface';
   styleUrl: './aboutme.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutmeComponent { 
+export class AboutmeComponent implements OnInit{ 
 
   public greeting: string = 'Hola, soy Sebastián. Gusto en conocerte.';
   public info: string = 'Bachiller en Ingeniería Informática, con 2 años de experiencia en el Desarrollo de Software, interviniendo en la creación de funcionalidades para aplicaciones web, además de apoyar en la certificación de soluciones realizadas en sistemas de una empresa bancaria. Apasionado por la tecnología, interesado en aprender y aportar nuevas soluciones para la optimización de tareas anteriormente manuales y lentas.';
@@ -76,5 +77,11 @@ export class AboutmeComponent {
       level: 'Intermedio'
     },
   ];
+
+  ngOnInit(): void {
+    AOS.init({
+      once: false
+    });
+  }
 
 }

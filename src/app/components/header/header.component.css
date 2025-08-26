@@ -16,6 +16,10 @@ header.fixed {
   backdrop-filter: blur(5px);
 }
 
+header.fixed .primary-menu{
+  color: aqua;
+}
+
 header.visible {
   top: 0; 
 }
@@ -72,6 +76,9 @@ header.visible {
 .content-navbar .primary-menu ul .element-primary a{ transition: color .3s ease; }
 .content-navbar .primary-menu ul .element-primary a:hover { color: white; }
 .content-navbar .primary-menu ul:hover .element-primary a:not(:hover) { color: #858585; }
+
+header.fixed .content-navbar .primary-menu ul .element-primary a:hover { color: aqua; }
+header.fixed .content-navbar .primary-menu ul:hover .element-primary a:not(:hover) { color: rgb(0, 160, 160); }
 
 a.selectetd-a{
   color: aqua;

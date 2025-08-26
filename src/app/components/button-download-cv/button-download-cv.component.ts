@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { NavBarService } from '../../services/navBar.service';
+import { ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-button-download-cv',
@@ -9,7 +8,5 @@ import { NavBarService } from '../../services/navBar.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonDownloadCvComponent { 
-
-  stateBtnService = inject(NavBarService);
 
 }

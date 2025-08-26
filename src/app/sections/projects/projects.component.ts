@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { CardProjectComponent } from "../../components/card-project/card-project.component";
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-projects',
@@ -9,7 +10,7 @@ import { CardProjectComponent } from "../../components/card-project/card-project
   styleUrl: './projects.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectsComponent { 
+export class ProjectsComponent implements OnInit{ 
 
   public projects: Project[] = [
     {
@@ -37,5 +38,9 @@ export class ProjectsComponent {
       repositoryUrl: 'https://github.com/sebastian-VB/heores-app',
     }
   ];
+
+  ngOnInit(): void {
+    AOS.init();
+  }
 
 }
