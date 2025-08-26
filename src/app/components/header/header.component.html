@@ -1,0 +1,55 @@
+
+<header class="header" [class.position-fixed]="showMenu" [class.position-default]="hidingMenu" [class.fixed]="isFixed" [class.visible]="isVisible">
+  <div class="content-header">
+
+    <div class="content-logo">
+      <div class="mbl-icon-hamburger" (click)="openMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo">
+        <img src="./images/sebasdev.webp" alt="">
+      </div>
+    </div>
+
+    <div class="content-navbar">
+      <nav>
+        <div class="mbl-nav-bag"></div>
+        <div class="menu">
+          <div class="primary-menu">
+            <ul>
+              @for (element of elementsMenuMobile; track element; let index = $index) {
+                <li class="element-primary">
+                  <a [href]="element.link" [class]="element.name"
+                    [class.selectetd-a]="index == selectedIndex && selectedIndex != 0"
+                    [class.no-selectetd-a]="index != selectedIndex && selectedIndex != 0"
+                    (click)="changeClass(index)"
+                  >
+                    // {{element.name}}
+                  </a>
+                </li>
+              }
+            </ul>
+          </div>
+          <div class="mbl-menu" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu">
+            <div class="mbl-menu-icon" (click)="closeMenu()">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul>
+              @for (element of elementsMenuMobile; track element; let index = $index) {
+                <li class="mbl-element-primary">
+                  <a [href]="element.link" [class.show-menu]="showMenu" [class.hide-menu]="hidingMenu" 
+                    [class.selectetd-mobile-a]="index == selectedIndex"
+                    (click)="navigateAndClose($event, `${element.name}`, index)"
+                  >
+                    // {{element.name}}
+                  </a>
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+</header>

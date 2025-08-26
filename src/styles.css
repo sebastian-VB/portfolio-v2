@@ -1,1 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?famzily=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
+
+:root{
+  --bg-page: rgb(26, 25, 29);
+  --bg-aboutme: rgb(21, 33, 46);
+
+  --font-family-primary: 'Poppins', sans-serif;
+  --font-weight-primary: 700;
+  --font-family-secondary: 'Roboto Mono', monospace;
+  --font-weight-secondary: 400;
+  
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  background-color: var(--bg-page);
+  color: white;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-secondary);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-primary);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.title-section{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+.capsule{
+  background-color: #004a8f;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+

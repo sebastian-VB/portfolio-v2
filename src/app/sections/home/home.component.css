@@ -1,0 +1,51 @@
+
+.home{
+  width: 100%;
+  height: 85vh;
+  background: linear-gradient(rgba(21, 33, 46, 1) 70%, rgba(26, 25, 29, 0.7));
+}
+
+.home-content{
+  height: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content.show{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.home-content h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.home-content h2{
+  font-size: 2rem;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-secondary);
+  text-align: center;
+}
+
+/* diseño del boton */
+
+.home-content .content-btn{
+  margin-top: 40px;
+}
+
+@media(max-width: 930px){
+
+  .home-content h1{
+    font-size: 3rem;
+  }
+
+  .home-content h2{
+    font-size: 1.5rem;
+  }
+}

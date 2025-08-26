@@ -1,0 +1,65 @@
+/* diseño del boton */
+.btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: .5s ease all;
+}
+
+.btn span{
+  position: absolute;
+  z-index: 2;
+  transition: .5s ease-out all;
+  left: 20%;
+  font-size: 16px;
+}
+
+.btn .icon{
+  display: flex;
+  align-items: end;
+  position: absolute;
+  z-index: 2;
+  top: -40px;
+  right: 20px;
+  opacity: 0;
+  transition: .5s ease-out all;
+}
+
+.btn .icon i{
+  font-size: 18px;
+}
+
+.btn:hover span{
+  left: 10%;
+}
+
+.btn:hover .icon{
+  top: 30%;
+  opacity: 1;
+}
+
+.btn::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #955536;
+  clip-path: circle(0% at 50% 50%);
+  transition: .4s ease-in all;
+}
+
+.btn:hover::after{
+  clip-path: circle(100% at 50% 50%);
+}

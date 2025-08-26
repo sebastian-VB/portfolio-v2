@@ -1,0 +1,16 @@
+<section class="projects">
+
+    <h2 class="title-section" data-aos="zoom-in">My projects</h2>
+
+    <div class="projects-content">
+        @for (project of projects; track project; let i = $index) {
+            @if (i % 2 !== 0) {
+                <app-card-project [project]="project" class="masonry" data-aos="flip-left"/>
+            }
+            @else {
+                <app-card-project [project]="project" class="no-masonry" data-aos="flip-right"/>
+            }
+        }
+    </div>
+
+</section>

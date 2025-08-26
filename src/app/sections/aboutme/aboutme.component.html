@@ -1,0 +1,25 @@
+<section class="aboutme">
+
+    <h2 class="title-section" data-aos="zoom-in">
+        About me
+    </h2>
+
+    <div class="aboutme-content">
+        <div class="content">
+            <div class="aboutme-info">
+                <div class="aboutme-img" data-aos="fade-right">
+                    <img src="./images/developer-avatar.svg" alt="">
+                </div>
+                <div class="info" data-aos="fade-right" data-aos-delay="200">
+                    <span></span>
+                    <p>{{info}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="aboutme-skills">
+                <app-skills [skills]="listSkills" />
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,169 @@
+.acordion-container {
+  width: 750px;
+}
+
+.acordion-container .acordion-header {
+  height: 60px;
+  background-color: #004a8f;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  transition: all .3s ease;
+}
+
+.acordion-container .acordion-body {
+  background-color: #002649;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 10px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, padding 0.3s ease, opacity .5s ease;
+}
+
+.acordion-container .acordion-body.open {
+  padding: 10px;
+  opacity: 1;
+  max-height: 500px;
+}
+
+.acordion-container .acordion-header.click{
+  background-color: #007DF3;
+  font-weight: 700;
+}
+
+.acordion-container .acordion-header .job{
+  font-weight: 600;
+}
+
+/* diseño del boton */
+.acordion-header .header-rigth{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.acordion-header .header-rigth .content-icon{
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.acordion-header .header-rigth .content-icon .line1{
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 6.5px;
+}
+
+.acordion-header .header-rigth .content-icon .line2{
+  width: 2px;
+  height: 80%;
+  background-color: white;
+  position: absolute;
+  left: 7.5px;
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.acordion-header .header-rigth .content-icon .line2.click{
+  opacity: 0;
+}
+
+
+/* diseño del cuerpo del acordion */
+.acordion-body {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.acordion-body .body-content{
+  width: 60%;
+}
+
+.acordion-body .content-img{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acordion-body .content-img img{ width: 80%; }
+
+.acordion-body .body-content .content-other-info .address{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+}
+
+.acordion-body .body-content .content-other-info{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.acordion-body .body-content .content-desc{
+  padding: 10px;
+  font-size: 14px;
+}
+
+.acordion-body .body-content .content-tech{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 5px 0;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+@media(max-width: 800px){
+  .acordion-container {
+    width: 100%;
+  }
+}
+
+@media(max-width: 720px){
+  .acordion-container .acordion-header {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .acordion-header .header-rigth{
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 650px){
+  
+  .acordion-body{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .acordion-body .body-content{
+    width: 95%;
+  }
+
+  .acordion-header span{
+    font-size: 12px;
+  }
+
+  .acordion-body .content-img{
+    height: 90px;
+  }
+
+  .acordion-body .content-img img{ width: 100%;}
+}
